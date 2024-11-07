@@ -4,10 +4,7 @@ module.exports = {
         es2021: true,
         node: true,
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:prettier/recommended'
-    ],
+    extends: ['eslint:recommended', 'plugin:prettier/recommended'],
     parserOptions: {
         ecmaVersion: 12,
         sourceType: 'module',
@@ -15,8 +12,8 @@ module.exports = {
     rules: {
         'prettier/prettier': 'error',
         'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-        'eqeqeq': ['error', 'always'],
-        'curly': ['error', 'all'],
+        eqeqeq: ['error', 'always'],
+        curly: ['error', 'all'],
         'no-console': 'warn',
         'no-debugger': 'warn',
         'arrow-body-style': ['error', 'as-needed'],
