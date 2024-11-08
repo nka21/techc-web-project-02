@@ -26,36 +26,17 @@ import TableData from '../components/tableData.astro';
         <InnerTitle>定員：4名様</InnerTitle>
         <table class="w-full border-gray-900 border-[1px]">
             <TableRow>
-                <th class="border-r-[1px] border-gray-900 last:border-none"
-                    >平日
-                </th>
-                <td
-                    class="text-center border-r-[1px] border-gray-900 last:border-none"
-                    >15,000円</td
-                >
+                <TableHead> 平日 </TableHead>
+                <TableData>15,000円</TableData>
             </TableRow>
-            <tr
-                class="grid grid-cols-2 border-b-[1px] border-gray-900 last:border-none"
-            >
-                <th class="border-r-[1px] border-gray-900 last:border-none"
-                    >土日祝</th
-                >
-                <td
-                    class="text-center border-r-[1px] border-gray-900 last:border-none"
-                    >18,000円</td
-                >
-            </tr>
-            <tr
-                class="grid grid-cols-2 border-b-[1px] border-gray-900 last:border-none"
-            >
-                <th class="border-r-[1px] border-gray-900 last:border-none"
-                    >長期休暇</th
-                >
-                <td
-                    class="text-center border-r-[1px] border-gray-900 last:border-none"
-                    >20,000円</td
-                >
-            </tr>
+            <TableRow>
+                <TableHead> 土日祝 </TableHead>
+                <TableData>18,000円</TableData>
+            </TableRow>
+            <TableRow>
+                <TableHead> 長期休暇 </TableHead>
+                <TableData>20,000円</TableData>
+            </TableRow>
         </table>
     </section>
 </Layout>
