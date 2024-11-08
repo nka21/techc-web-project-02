@@ -18,4 +18,43 @@ import InnerTitle from '../components/innerTitle.astro';
         <NewsList />
         <ReservationBtn />
     </section>
+    <section>
+        <SecTitle>ご利用金額</SecTitle>
+        <InnerTitle>定員：4名様</InnerTitle>
+        <table class="w-full border-gray-900 border-[1px]">
+            <tr
+                class="grid grid-cols-2 border-b-[1px] border-gray-900 last:border-none"
+            >
+                <th class="border-r-[1px] border-gray-900 last:border-none"
+                    >平日</th
+                >
+                <td
+                    class="text-center border-r-[1px] border-gray-900 last:border-none"
+                    >15,000円</td
+                >
+            </tr>
+            <tr
+                class="grid grid-cols-2 border-b-[1px] border-gray-900 last:border-none"
+            >
+                <th class="border-r-[1px] border-gray-900 last:border-none"
+                    >土日祝</th
+                >
+                <td
+                    class="text-center border-r-[1px] border-gray-900 last:border-none"
+                    >18,000円</td
+                >
+            </tr>
+            <tr
+                class="grid grid-cols-2 border-b-[1px] border-gray-900 last:border-none"
+            >
+                <th class="border-r-[1px] border-gray-900 last:border-none"
+                    >長期休暇</th
+                >
+                <td
+                    class="text-center border-r-[1px] border-gray-900 last:border-none"
+                    >20,000円</td
+                >
+            </tr>
+        </table>
+    </section>
 </Layout>
