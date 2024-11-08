@@ -4,7 +4,7 @@ import SecTitle from '../components/secTitle.astro';
 import NewsList from '../components/newsLits.astro';
 import ReservationBtn from '../components/reservation.astro';
 import InnerTitle from '../components/innerTitle.astro';
-import TableList from '../components/tableList.astro';
+import TableRow from '../components/tableRow.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -23,7 +23,7 @@ import TableList from '../components/tableList.astro';
         <SecTitle>ご利用金額</SecTitle>
         <InnerTitle>定員：4名様</InnerTitle>
         <table class="w-full border-gray-900 border-[1px]">
-            <TableList>
+            <TableRow>
                 <th class="border-r-[1px] border-gray-900 last:border-none"
                     >平日
                 </th>
@@ -31,7 +31,7 @@ import TableList from '../components/tableList.astro';
                     class="text-center border-r-[1px] border-gray-900 last:border-none"
                     >15,000円</td
                 >
-            </TableList>
+            </TableRow>
             <tr
                 class="grid grid-cols-2 border-b-[1px] border-gray-900 last:border-none"
             >
