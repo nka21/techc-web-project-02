@@ -1,0 +1,60 @@
+---
+const list = [
+    {
+        name: 'トップページ',
+        link: '#',
+    },
+    {
+        name: 'お知らせ',
+        link: '#',
+    },
+    {
+        name: '施設案内',
+        link: '#',
+    },
+    {
+        name: 'ご予約について',
+        link: '#',
+    },
+    {
+        name: 'アクセス',
+        link: '#',
+    },
+    {
+        name: 'ご意見・ご感想・お問い合わせ',
+        link: '#',
+    },
+];
+---
+
+<header
+    id="header"
+    class="w-full fixed h-fit top-0 left-0 bg-[#FAF7F0] px-[14px]"
+>
+    <nav class="grid">
+        <button id="headerBtn" class="w-10 h-10 bg-gray-900 ml-auto"></button>
+        <ul
+            class="text-center overflow-hidden duration-200 h-0"
+            id="headerLists"
+        >
+            {
+                list.map((item) => (
+                    <li class="border-b-[1px] border-gray-900 last:border-none">
+                        <a href={item.link} class="py-3 block">
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const hBtn = document.getElementById('headerBtn');
+    const hLists = document.getElementById('headerLists');
+
+    hBtn?.addEventListener('click', () => {
+        hLists?.classList.toggle('h-fit');
+    });
+</script>

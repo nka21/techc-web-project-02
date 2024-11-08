@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
 
 interface Props {
     title: string;
@@ -25,9 +26,15 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body class="font-kurenaido">
+        <Header />
         <main class="px-[14px]">
             <slot />
         </main>
         <Footer />
     </body>
+    <style is:global>
+        :root {
+            interpolate-size: allow-keywords;
+        }
+    </style>
 </html>
