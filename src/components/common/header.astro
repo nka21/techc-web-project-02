@@ -17,6 +17,7 @@ const navItems = [
         <!-- メニューボタン -->
         <!-- ナビゲーションリスト -->
         <ul
+            id="menuList"
             class="text-center overflow-hidden duration-200 h-0"
             id="headerLists"
         >
@@ -34,10 +35,10 @@ const navItems = [
 </header>
 
 <script>
-    const hBtn = document.getElementById('headerBtn');
-    const hLists = document.getElementById('headerLists');
+    const menuButton = document.getElementById('menuButton');
+    const menuList = document.getElementById('menuList');
 
-    hBtn?.addEventListener('click', () => {
-        hLists?.classList.toggle('h-fit');
+    menuButton?.addEventListener('click', () => {
+        menuList?.classList.toggle('h-fit');
     });
 </script>
