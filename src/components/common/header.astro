@@ -1,29 +1,11 @@
 ---
-const list = [
-    {
-        name: 'トップページ',
-        link: '#',
-    },
-    {
-        name: 'お知らせ',
-        link: '#',
-    },
-    {
-        name: '施設案内',
-        link: '#',
-    },
-    {
-        name: 'ご予約について',
-        link: '#',
-    },
-    {
-        name: 'アクセス',
-        link: '#',
-    },
-    {
-        name: 'ご意見・ご感想・お問い合わせ',
-        link: '#',
-    },
+const navItems = [
+    { name: 'トップページ', link: '#' },
+    { name: 'お知らせ', link: '#' },
+    { name: '施設案内', link: '#' },
+    { name: 'ご予約について', link: '#' },
+    { name: 'アクセス', link: '#' },
+    { name: 'ご意見・ご感想・お問い合わせ', link: '#' },
 ];
 ---
 
@@ -38,7 +20,7 @@ const list = [
             id="headerLists"
         >
             {
-                list.map((item) => (
+                navItems.map((item) => (
                     <li class="border-b border-gray-900 last:border-none">
                         <a href={item.link} class="py-3 block">
                             {item.name}
