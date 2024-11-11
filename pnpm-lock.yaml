@@ -1300,12 +1300,7 @@ packages:
             {
                 integrity: sha512-v8mKWcEPN7hkfyVsMFWV0F8UgL4GUJKT172KTB7dePO3yJb64HBwCckC0QnA60QQh3jK6+2xwyWEc5QvCeqjtg==,
             }
-        engines:
-            {
-                node: ^18.17.1 || ^20.3.0 || >=21.0.0,
-                npm: '>=9.6.5',
-                pnpm: '>=7.1.0',
-            }
+        engines: { node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0' }
         hasBin: true
 
     autoprefixer@10.4.20:
