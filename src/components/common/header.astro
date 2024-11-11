@@ -26,17 +26,14 @@ const navItems = [
         <ul
             id="menuList"
             class="text-center overflow-hidden duration-200 h-0"
-            id="headerLists"
         >
-            {
-                navItems.map((item) => (
-                    <li class="border-b border-gray-900 last:border-none">
-                        <a href={item.link} class="py-3 block">
-                            {item.name}
-                        </a>
-                    </li>
-                ))
-            }
+            {navItems.map((item) => (
+                <li class="border-b border-gray-900 last:border-none">
+                    <a href={item.link} class="block py-3">
+                        {item.name}
+                    </a>
+                </li>
+            ))}
         </ul>
     </nav>
 </header>
