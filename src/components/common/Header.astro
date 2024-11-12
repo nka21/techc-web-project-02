@@ -9,31 +9,23 @@ const navItems = [
 ];
 ---
 
-<header
-    id="header"
-    class="w-full fixed h-fit top-0 left-0 bg-[#FAF7F0] px-[14px]"
->
+<header id="header" class="fixed left-0 top-0 h-fit w-full bg-[#FAF7F0] px-[14px]">
     <nav class="grid">
         <!-- メニューボタン -->
-        <button
-            id="menuButton"
-            class="w-10 h-10 bg-gray-900 ml-auto"
-            aria-expanded="false"
-            aria-label="Toggle Menu"
-        />
+        <button id="menuButton" class="ml-auto h-10 w-10 bg-gray-900" aria-expanded="false" aria-label="Toggle Menu"
+        ></button>
 
         <!-- ナビゲーションリスト -->
-        <ul
-            id="menuList"
-            class="text-center overflow-hidden duration-200 h-0"
-        >
-            {navItems.map((item) => (
-                <li class="border-b border-gray-900 last:border-none">
-                    <a href={item.link} class="block py-3">
-                        {item.name}
-                    </a>
-                </li>
-            ))}
+        <ul id="menuList" class="h-0 overflow-hidden text-center duration-200">
+            {
+                navItems.map((item) => (
+                    <li class="border-b border-gray-900 last:border-none">
+                        <a href={item.link} class="block py-3">
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
         </ul>
     </nav>
 </header>
