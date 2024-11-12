@@ -1,9 +1,13 @@
+---
+const { privacyPolicyLink, managerInfo, copyright } = Astro.props;
+---
+
 <footer class="w-full text-center bg-gray-900 text-white py-6">
-    <a href="#" class="text-[10px]">プライバシーポリシー</a>
+    <a href={privacyPolicyLink} class="text-[10px]">プライバシーポリシー</a>
     <p class="text-[10px]">
-        邑南町香木の森公園バンガロー指定管理者／株式会社ウェルス
+        {managerInfo}
     </p>
     <small>
-        <p class="text-[10px]">&copy;2024koubokubungalow</p>
+        <p class="text-[10px]">{copyright}</p>
     </small>
 </footer>

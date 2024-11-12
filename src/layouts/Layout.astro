@@ -7,6 +7,12 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+
+// Footer contents
+const privacyPolicyLink = '#';
+const managerInfo = '邑南町香木の森公園バンガロー指定管理者／株式会社ウェルス';
+const copyright = '©️2024koubokubungalow';
 ---
 
 <!doctype html>
@@ -30,7 +36,11 @@ const { title } = Astro.props;
         <main class="px-[14px]">
             <slot />
         </main>
-        <Footer />
+        <Footer
+            privacyPolicyLink={privacyPolicyLink}
+            managerInfo={managerInfo}
+            copyright={copyright}
+        />
     </body>
     <style is:global>
         :root {
