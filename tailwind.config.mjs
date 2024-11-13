@@ -7,6 +7,12 @@ export default {
                 kaisei: ['Kaisei Decol', 'serif'],
                 kurenaido: ['Zen Kurenaido', 'serif'],
             },
+            colors: {
+                primary: '#B17457',
+                accent: '#D8D2C2',
+                base: '#FAF7F0',
+                'black-100': '#4A4947',
+            }
         },
     },
     plugins: [],
