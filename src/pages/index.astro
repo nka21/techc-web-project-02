@@ -1,5 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Common components
+import SecTitle from '../components/common/SecTitle.astro';
+import InnerTitle from '../components/common/InnerTitle.astro';
+
+// News components
+import NewsList from '../components/news/NewsLists.astro';
+
+// Reservation components
+import ReservationBtn from '../components/reservation/Reservation.astro';
+
+// Table components
+import TableRow from '../components/table/TableRow.astro';
+import TableHead from '../components/table/TableHead.astro';
+import TableData from '../components/table/TableData.astro';
 ---
 
-<Layout title="Welcome to Astro." />
+<Layout title="Welcome to Astro.">
+    <section class="pt-10">
+        <img src="" alt="" class="h-80 w-full border-solid bg-gray-900" aria-label="バンガローのイメージイラスト" />
+        <h1 class="text-center text-xl">
+            ハーブの香りと木々の隙間から降り注ぐ<br />木漏れ日を感じる癒し空間
+        </h1>
+    </section>
+    <section>
+        <SecTitle>お知らせ</SecTitle>
+        <NewsList />
+        <ReservationBtn />
+    </section>
+    <section>
+        <SecTitle>ご利用金額</SecTitle>
+        <InnerTitle>定員：4名様</InnerTitle>
+        <table class="w-full border-[1px] border-gray-900">
+            <TableRow>
+                <TableHead> 平日 </TableHead>
+                <TableData>15,000円</TableData>
+            </TableRow>
+            <TableRow>
+                <TableHead> 土日祝 </TableHead>
+                <TableData>18,000円</TableData>
+            </TableRow>
+            <TableRow>
+                <TableHead> 長期休暇 </TableHead>
+                <TableData>20,000円</TableData>
+            </TableRow>
+        </table>
+    </section>
+    <section>
+        <!-- ここにスライドを追加予定 -->
+        <p class="text-sm leading-6">
+            香木の森公園の中にあるバンガロー施設。<br />木漏れ日が差し込む自然の中、<br />
+            四季折々の風景を楽しめます。<br />敷地内にはオーガニックハーブやバラ園・<br />
+            クラフト館・アスレチックなど<br />
+            大人から子供まで楽しめる施設、設備がございます。
+        </p>
+    </section>
+</Layout>

@@ -3,7 +3,7 @@ name: Lint and Prettier Check
 on:
     pull_request:
         branches:
-            - develop
+            - main
 
 jobs:
     lint-and-prettier:

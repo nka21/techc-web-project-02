@@ -1,0 +1,40 @@
+---
+const navItems = [
+    { name: 'トップページ', link: '#' },
+    { name: 'お知らせ', link: '#' },
+    { name: '施設案内', link: '#' },
+    { name: 'ご予約について', link: '#' },
+    { name: 'アクセス', link: '#' },
+    { name: 'ご意見・ご感想・お問い合わせ', link: '#' },
+];
+---
+
+<header id="header" class="fixed left-0 top-0 h-fit w-full bg-[#FAF7F0] px-[14px]">
+    <nav class="grid">
+        <!-- メニューボタン -->
+        <button id="menuButton" class="ml-auto h-10 w-10 bg-gray-900" aria-expanded="false" aria-label="Toggle Menu"
+        ></button>
+
+        <!-- ナビゲーションリスト -->
+        <ul id="menuList" class="h-0 overflow-hidden text-center duration-200">
+            {
+                navItems.map((item) => (
+                    <li class="border-b border-gray-900 last:border-none">
+                        <a href={item.link} class="block py-3">
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const menuList = document.getElementById('menuList');
+
+    menuButton?.addEventListener('click', () => {
+        menuList?.classList.toggle('h-fit');
+    });
+</script>

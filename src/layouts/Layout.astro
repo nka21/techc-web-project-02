@@ -1,28 +1,45 @@
 ---
+import Footer from '../components/common/Footer.astro';
+import Header from '../components/common/Header.astro';
+
 interface Props {
-  title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
+
+// Footer contents
+const privacyPolicyLink = '#';
+const managerInfo = '邑南町香木の森公園バンガロー指定管理者／株式会社ウェルス';
+const copyright = '©️2024koubokubungalow';
 ---
 
 <!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Zen+Kurenaido&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+<html lang="ja" class="box-border bg-[#FAF7F0]">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Zen+Kurenaido&display=swap"
+            rel="stylesheet"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="font-kurenaido">
+        <Header />
+        <main class="px-[14px]">
+            <slot />
+        </main>
+        <Footer privacyPolicyLink={privacyPolicyLink} managerInfo={managerInfo} copyright={copyright} />
+    </body>
+    <style is:global>
+        :root {
+            interpolate-size: allow-keywords;
+        }
+    </style>
 </html>
