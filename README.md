@@ -24,7 +24,6 @@ pnpm run dev
 | プレフィックス | 用途                       | 命名例                         |
 | -------------- | -------------------------- | ------------------------------ |
 | `feature/`     | 新機能の追加               | `feature/add-login-page`       |
-| `feature/`     | 新機能の追加               | `feature/add-login-page`       |
 | `fix/`         | バグ修正                   | `fix/header-bug`               |
 | `hotfix/`      | 緊急で修正が必要なバグ対応 | `hotfix/critical-error`        |
 | `refactor/`    | リファクタリング           | `refactor/improve-performance` |
