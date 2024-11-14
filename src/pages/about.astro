@@ -18,13 +18,15 @@ import Image03 from '../assets/img03.png';
         <section class="pt-10">
             <SecTitle>施設案内</SecTitle>
             <!-- 後にSecTitleでmargin-block:26pxをかけたい -->
-            <div>
+            <div class="mb-[50px] grid gap-[6px]">
                 <InnerTitle>2段ベッドx2台【9棟】</InnerTitle>
-                <Image src={Image03} alt="2段ベッドx2台部屋の写真です。" />
-                <p>
-                    一部屋に二段ベットが台設置されており、<br />
-                    最大4名様まで宿泊可能です。
-                </p>
+                <div class="grid gap-3">
+                    <Image src={Image03} alt="2段ベッドx2台部屋の写真です。" />
+                    <p class="text-center">
+                        一部屋に二段ベットが台設置されており、<br />
+                        最大4名様まで宿泊可能です。
+                    </p>
+                </div>
             </div>
         </section>
     </article>
