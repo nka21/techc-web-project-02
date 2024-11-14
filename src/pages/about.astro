@@ -3,13 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import SecTitle from '../components/common/SecTitle.astro';
 import InnerTitle from '../components/common/InnerTitle.astro';
 
-import Image from 'astro:assets';
+import { Image } from 'astro:assets';
 import About01 from '../assets/about/about01.png';
 import About02 from '../assets/about/about02.png';
 import About03 from '../assets/about/about03.png';
 import About04 from '../assets/about/about04.png';
 import About05 from '../assets/about/about05.png';
 import About06 from '../assets/about/about06.png';
+import Image03 from '../assets/img03.png';
 ---
 
 <Layout title="施設案内">
@@ -18,6 +19,7 @@ import About06 from '../assets/about/about06.png';
             <SecTitle>施設案内</SecTitle>
             <div>
                 <InnerTitle>2段ベッドx2台【9棟】</InnerTitle>
+                <Image src={Image03} alt="2段ベッドx2台部屋の写真です。" />
                 <p>
                     一部屋に二段ベットが台設置されており、<br />
                     最大4名様まで宿泊可能です。
