@@ -12,17 +12,34 @@ import newsData from '../locales/ja/news.json';
 const sortedNews = newsData.news.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
+
+// 重要なお知らせ（isImportant が true）のアイテムを抽出
+const importantNews = sortedNews.filter((news) => news.isImportant);
+const regularNews = sortedNews.filter((news) => !news.isImportant);
 ---
 
 <Layout title="お知らせ">
-    <div class="my-6 container mx-auto">
+    <div class="container mx-auto my-6">
         <SecTitle title="お知らせ" />
-        {sortedNews.map((news) => (
-            <NewsItem
-                title={news.title}
-                content={news.content}
-                date={news.date}
-            />
-        ))}
+        {
+            // 重要なお知らせが存在する場合表示
+            importantNews.length > 0 && (
+                <CouponItem
+                    title={importantNews[0].title}
+                    content={importantNews[0].content}
+                    date={importantNews[0].date}
+                />
+            )
+        }
+        {
+            // 通常のお知らせをリストとして表示
+            regularNews.map((news) => (
+                <NewsItem
+                    title={news.title}
+                    content={news.content}
+                    date={news.date}
+                />
+            ))
+        }
     </div>
 </Layout>
