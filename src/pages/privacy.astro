@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SecTitle from '../components/common/SecTitle.astro';
+import PrivacyBox from '../components/privacy/PrivacyBox.astro';
 ---
 
 <Layout title="プライバシーポリシー">
     <article class="pt-[66px]">
         <section>
             <SecTitle>プライバシーポリシー</SecTitle>
-            <div class="grid gap-[15px] border-b-[1px] border-accent py-[25px]">
+            <PrivacyBox>
                 <h3 class="font-kaisei text-[15px] before:content-['ー'] after:content-['ー']">個人情報保護方針</h3>
                 <p class="text-sm first-letter:pl-4">
                     株式会社ウェルスは、邑南町香木の森公園 バンガローの指定管理業務を運営していくうえで
@@ -33,7 +34,7 @@ import SecTitle from '../components/common/SecTitle.astro';
                         個人情報保護に関する規程や行動規範を定め、個人情報の保護に取り組みます。またその運用にあたって定期的に監査責任者が確認・監査・見直しを行うことにより、継続的に改善いたします。
                     </li>
                 </ol>
-            </div>
+            </PrivacyBox>
         </section>
     </article>
 </Layout>
