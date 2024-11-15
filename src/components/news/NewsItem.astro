@@ -1,0 +1,22 @@
+---
+import InnerTitle from '../common/InnerTitle.astro';
+
+const { title, content, date } = Astro.props;
+---
+
+<div class="py-6">
+    <div class="">
+        <InnerTitle>{title}</InnerTitle>
+    </div>
+    <div class="mx-5 my-6 bg-accent">
+        <p
+            class="text-balance px-3 py-3 text-xs font-thin leading-loose tracking-widest text-black-100"
+        >
+            {content}
+        </p>
+    </div>
+    <div class="flex items-center space-x-3">
+        <div class="h-[0px] w-full border-[0.5px] border-black-100 opacity-30"></div>
+        <p class="text-sm text-black-100">{date}</p>
+    </div>
+</div>
