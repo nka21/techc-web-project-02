@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import SecTitle from '../components/common/SecTitle.astro';
+import NewsItem from '../components/news/NewsItem.astro';
+
+// テキストをまとめたjsonファイル
+import newsData from '../locales/ja/news.json';
+---
+
+<Layout title="お知らせ">
+    <div class="my-6 container mx-auto">
+        <SecTitle title="お知らせ" />
+        <NewsItem
+            title={newsData.news[0].title}
+            content={newsData.news[0].content}
+            date={newsData.news[0].date}
+        />
+        <NewsItem
+            title={newsData.news[1].title}
+            content={newsData.news[1].content}
+            date={newsData.news[1].date}
+        />
+        <NewsItem
+            title={newsData.news[2].title}
+            content={newsData.news[2].content}
+            date={newsData.news[2].date}
+        />
+        <NewsItem
+            title={newsData.news[3].title}
+            content={newsData.news[3].content}
+            date={newsData.news[3].date}
+        />
+        <NewsItem
+            title={newsData.news[4].title}
+            content={newsData.news[4].content}
+            date={newsData.news[4].date}
+        />
+    </div>
+</Layout>
