@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import SecTitle from '../components/common/SecTitle.astro';
 import PrivacyBox from '../components/privacy/PrivacyBox.astro';
 
-import UserPrivacyPolicy from '../locales/ja/UserPrivacyPolicy.json';
-import PrivacyItems from '../locales/ja/PrivacyItems.json';
-import Contact from '../locales/ja/Contact.json';
+import PrivacyPolicy from '../locales/ja/PrivacyPolicy.json';
+
+const { UserPrivacyPolicy, PrivacyItem, Contact } = PrivacyPolicy;
 ---
 
 <Layout title="プライバシーポリシー">
