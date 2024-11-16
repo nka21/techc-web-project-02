@@ -7,19 +7,19 @@ import UserPrivacyPolicy from '../locales/ja/UserPrivacyPolicy.json';
 ---
 
 <Layout title="プライバシーポリシー">
-    <article class="pt-[66px] leading-[25px]">
+    <article class="pt-[66px]">
         <section>
             <SecTitle>プライバシーポリシー</SecTitle>
             {
                 (
                     <PrivacyBox>
-                        <h3 class="font-kaisei text-[15px] before:content-['ー'] after:content-['ー']">
+                        <h3 class="font-kaisei text-[15px] leading-[25px] before:content-['ー'] after:content-['ー']">
                             {UserPrivacyPolicy.title}
                         </h3>
                         <p class="first-letter:pl-4">{UserPrivacyPolicy.content}</p>
                         <ol class="grid list-decimal gap-[14px] pl-5">
                             {UserPrivacyPolicy.items.map((item) => (
-                                <li>{item}</li>
+                                <li class="leading-[25px]">{item}</li>
                             ))}
                         </ol>
                     </PrivacyBox>
