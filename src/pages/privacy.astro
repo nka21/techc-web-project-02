@@ -4,61 +4,41 @@ import SecTitle from '../components/common/SecTitle.astro';
 import PrivacyBox from '../components/privacy/PrivacyBox.astro';
 
 import UserPrivacyPolicy from '../locales/ja/UserPrivacyPolicy.json';
+import PrivacyItems from '../locales/ja/PrivacyItems.json';
 ---
 
 <Layout title="プライバシーポリシー">
     <article class="pt-[66px]">
         <section>
             <SecTitle>プライバシーポリシー</SecTitle>
-            {
-                (
-                    <PrivacyBox>
-                        <h3 class="font-kaisei text-[15px] leading-[25px] before:content-['ー'] after:content-['ー']">
-                            {UserPrivacyPolicy.title}
-                        </h3>
-                        <p class="first-letter:pl-4">{UserPrivacyPolicy.content}</p>
-                        <ol class="grid list-decimal gap-[14px] pl-5">
-                            {UserPrivacyPolicy.items.map((item) => (
-                                <li class="leading-[25px]">{item}</li>
-                            ))}
-                        </ol>
-                    </PrivacyBox>
-                )
-            }
 
             <PrivacyBox>
-                <h3 class="font-kaisei text-[15px]">個人情報の収集について</h3>
-                <p>当店では、次のような場合に必要な範囲で個人情報を収集することがあります。</p>
-                <ul class="list-disc pl-5">
-                    <li>当店へのお問い合わせ時</li>
-                    <li>当店へのサービスお申し込み時</li>
-                </ul>
+                <h3 class="font-kaisei text-[15px] leading-[25px] before:content-['ー'] after:content-['ー']">
+                    {UserPrivacyPolicy.title}
+                </h3>
+                <p class="first-letter:pl-4">{UserPrivacyPolicy.content}</p>
+                <ol class="grid list-decimal gap-[14px] pl-5">
+                    {UserPrivacyPolicy.items.map((item) => <li class="leading-[25px]">{item}</li>)}
+                </ol>
             </PrivacyBox>
-            <PrivacyBox>
-                <h3 class="font-kaisei text-[15px]">個人情報の利用目的について</h3>
-                <p>当店は、お客様から収集した個人情報を次の目的で利用いたします。</p>
-                <ul class="list-disc pl-5">
-                    <li>お客様への連絡のため</li>
-                    <li>お客様からのお問い合せに対する回答のため</li>
-                    <li>お客様へのサービス提供のため</li>
-                </ul>
-            </PrivacyBox>
-            <PrivacyBox>
-                <h3 class="font-kaisei text-[15px]">個人情報の第三者への提供について</h3>
-                <p>
-                    当店では、お客様より取得した個人情報を
-                    第三者に開示または提供することはありません。ただし、次の場合は除きます。
-                </p>
-                <ul class="list-disc pl-5">
-                    <li>ご本人の同意がある場合</li>
-                    <li>警察からの要請など、官公署から要請の場合</li>
-                    <li>法律の適用を受ける場合</li>
-                </ul>
-            </PrivacyBox>
-            <PrivacyBox>
-                <h3 class="font-kaisei text-[15px]">個人情報の開示、訂正等について</h3>
-                <p>当社は、お客様ご本人からの自己情報の開示、訂正、削除等のお求めがあった場合は、確実に応じます。</p>
-            </PrivacyBox>
+
+            {
+                PrivacyItems.PrivacyItem.map((PrivacyItem: any) => (
+                    <PrivacyBox>
+                        <h3 class="font-kaisei text-[15px] leading-[25px]">{PrivacyItem.title}</h3>
+                        <p class="leading-[25px]">{PrivacyItem.content}</p>
+                        {PrivacyItem.items ? (
+                            <ul class="list-disc pl-5">
+                                {PrivacyItem.items.map((i: any) => (
+                                    <li>{i}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            false
+                        )}
+                    </PrivacyBox>
+                ))
+            }
             <PrivacyBox>
                 <h3 class="font-kaisei text-[15px]">個人情報保護に関するお問い合わせ先</h3>
                 <div>
