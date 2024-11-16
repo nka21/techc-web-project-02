@@ -2,39 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 import SecTitle from '../components/common/SecTitle.astro';
 import PrivacyBox from '../components/privacy/PrivacyBox.astro';
+
+import UserPrivacyPolicy from '../locales/ja/UserPrivacyPolicy.json';
 ---
 
 <Layout title="プライバシーポリシー">
     <article class="pt-[66px] leading-[25px]">
         <section>
             <SecTitle>プライバシーポリシー</SecTitle>
-            <PrivacyBox>
-                <h3 class="font-kaisei text-[15px] before:content-['ー'] after:content-['ー']">個人情報保護方針</h3>
-                <p class="first-letter:pl-4">
-                    株式会社ウェルスは、邑南町香木の森公園 バンガローの指定管理業務を運営していくうえで
-                    取得した個人情報は厳正に管理すべきであることを認識し、個人情報保護方針を定めるとともに、
-                    実行かつ維持に努めます。
-                </p>
-                <ol class="grid list-decimal gap-[14px] pl-5">
-                    <li>
-                        事業の内容、規模を考慮した適切な個人情報の取得、利用、提供を行うため、個人情報の官営責任者を置くとともに、日本工業規格JIS
-                        Q15001:2006「個人情報保護マネジメントシステム」に準拠した個人情報の取り扱いを行います。
-                    </li>
-                    <li>
-                        取得した個人情報の利用は業務遂行上、必要な範囲のみに限定し、その他の目的外利用は行わず、そのための適切な措置を講じます。
-                    </li>
-                    <li>
-                        必要かつ事業の実情と合致した適切なセキュリティ対策を講じることにより、当社の取り扱う個人情報の漏洩、滅失またはき損の防止及び是正に努めます。
-                    </li>
-                    <li>
-                        個人情報の取扱いに関しての相談又は苦情は誠実かつ迅速に対応いたします。また、当社の個人情報保護マネジメントシステムに関してのお問い合わせにも迅速に対応いたします。
-                    </li>
-                    <li>個人情報の取扱いに関する法令、国が定める指針、その他条例等の規範を遵守します。</li>
-                    <li>
-                        個人情報保護に関する規程や行動規範を定め、個人情報の保護に取り組みます。またその運用にあたって定期的に監査責任者が確認・監査・見直しを行うことにより、継続的に改善いたします。
-                    </li>
-                </ol>
-            </PrivacyBox>
+            {
+                (
+                    <PrivacyBox>
+                        <h3 class="font-kaisei text-[15px] before:content-['ー'] after:content-['ー']">
+                            {UserPrivacyPolicy.title}
+                        </h3>
+                        <p class="first-letter:pl-4">{UserPrivacyPolicy.content}</p>
+                        <ol class="grid list-decimal gap-[14px] pl-5">
+                            {UserPrivacyPolicy.items.map((item) => (
+                                <li>{item}</li>
+                            ))}
+                        </ol>
+                    </PrivacyBox>
+                )
+            }
+
             <PrivacyBox>
                 <h3 class="font-kaisei text-[15px]">個人情報の収集について</h3>
                 <p>当店では、次のような場合に必要な範囲で個人情報を収集することがあります。</p>
