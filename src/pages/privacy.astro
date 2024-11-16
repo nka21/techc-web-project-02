@@ -24,18 +24,16 @@ const { UserPrivacyPolicy, PrivacyItem, Contact } = PrivacyPolicy;
             </PrivacyBox>
 
             {
-                PrivacyItems.PrivacyItem.map((PrivacyItem: any) => (
+                PrivacyItem.map((item) => (
                     <PrivacyBox>
-                        <h3 class="font-kaisei text-[15px] leading-[25px]">{PrivacyItem.title}</h3>
-                        <p class="leading-[25px]">{PrivacyItem.content}</p>
-                        {PrivacyItem.items ? (
+                        <h3 class="font-kaisei text-[15px] leading-[25px]">{item.title}</h3>
+                        <p class="leading-[25px]">{item.content}</p>
+                        {item.items && (
                             <ul class="list-disc pl-5">
-                                {PrivacyItem.items.map((i: any) => (
+                                {item.items.map((i) => (
                                     <li>{i}</li>
                                 ))}
                             </ul>
-                        ) : (
-                            false
                         )}
                     </PrivacyBox>
                 ))
