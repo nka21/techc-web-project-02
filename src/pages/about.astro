@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SecTitle from '../components/common/SecTitle.astro';
+import InnerTitle from '../components/common/InnerTitle.astro';
+
+import { Image } from 'astro:assets';
+import About01 from '../assets/about/about01.png';
+import About02 from '../assets/about/about02.png';
+import About03 from '../assets/about/about03.png';
+import About04 from '../assets/about/about04.png';
+import About05 from '../assets/about/about05.png';
+import About06 from '../assets/about/about06.png';
+import About07 from '../assets/about/about07.png';
+import Image04 from '../assets/img04.png';
+---
+
+<Layout title="施設案内">
+    <article>
+        <section class="pt-[66px]">
+            <SecTitle>施設案内</SecTitle>
+            <!-- 後にSecTitleでmargin-block:26pxをかけたい -->
+            <div class="mt-[26px]">
+                <div class="mb-[50px] grid gap-[6px]">
+                    <InnerTitle>2段ベッドx2台【9棟】</InnerTitle>
+                    <div class="grid gap-3">
+                        <Image
+                            width="570"
+                            height="392"
+                            class="aspect-video w-full object-cover"
+                            src={Image04}
+                            alt="2段ベッドx2台部屋の写真です。"
+                        />
+                        <p class="text-center text-sm leading-[25px]">
+                            一部屋に二段ベットが台設置されており、<br />
+                            最大4名様まで宿泊可能です。
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-[50px] grid gap-[6px]">
+                    <InnerTitle>シングルベッドx2台【2棟】</InnerTitle>
+                    <div class="grid gap-3">
+                        <Image
+                            width="570"
+                            height="392"
+                            class="aspect-video w-full object-cover"
+                            src={Image04}
+                            alt="2段ベッドx2台部屋の写真です。"
+                        />
+                        <p class="text-center text-sm leading-[25px]">
+                            一部屋にシングルベッドが2台あるので<br />
+                            最大2名様まで宿泊可能です
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <InnerTitle>設備品</InnerTitle>
+            <ul class="grid grid-cols-2 gap-x-7 gap-y-[10px] py-[25px] text-center text-sm">
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About02}
+                        alt="エアコン"
+                    />
+                    <p class="leading-[25px]">エアコン</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About05}
+                        alt="冷蔵庫"
+                    />
+                    <p class="leading-[25px]">冷蔵庫</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About03}
+                        alt="電子レンジ"
+                    />
+                    <p class="leading-[25px]">電子レンジ</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About04}
+                        alt="電気ポット"
+                    />
+                    <p class="leading-[25px]">電気ポット</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={Image04}
+                        alt="寝具4組"
+                    />
+                    <p class="leading-[25px]">寝具4組</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About06}
+                        alt="シャワールーム"
+                    />
+                    <p class="leading-[25px]">シャワールーム</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About07}
+                        alt="トイレ"
+                    />
+                    <p class="leading-[25px]">トイレ</p>
+                </li>
+                <li class="grid gap-[10px]">
+                    <Image
+                        width="570"
+                        height="392"
+                        class="aspect-video w-full object-cover"
+                        src={About01}
+                        alt="ドライヤー"
+                    />
+                    <p class="leading-[25px]">ドライヤー</p>
+                </li>
+            </ul>
+        </section>
+    </article>
+</Layout>
