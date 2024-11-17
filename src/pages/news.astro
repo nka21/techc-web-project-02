@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import SecTitle from '../components/common/SecTitle.astro';
+import NewsItem from '../components/news/NewsItem.astro';
+import CouponItem from '../components/news/CouponItem.astro';
+
+// テキストをまとめたjsonファイル
+import newsData from '../locales/ja/news.json';
+
+// 日付順にnews配列をソート (降順)
+const sortedNews = newsData.news.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+// 重要なお知らせ（isImportant が true）のアイテムを抽出
+const importantNews = sortedNews.filter((news) => news.isImportant);
+const regularNews = sortedNews.filter((news) => !news.isImportant);
+---
+
+<Layout title="お知らせ">
+    <div class="container mx-auto my-6">
+        <SecTitle title="お知らせ" />
+        {
+            // 重要なお知らせが存在する場合表示
+            importantNews.length > 0 && (
+                <CouponItem
+                    title={importantNews[0].title}
+                    content={importantNews[0].content}
+                    date={importantNews[0].date}
+                />
+            )
+        }
+        {
+            // 通常のお知らせをリストとして表示
+            regularNews.map((news) => (
+                <NewsItem
+                    title={news.title}
+                    content={news.content}
+                    date={news.date}
+                />
+            ))
+        }
+    </div>
+</Layout>
