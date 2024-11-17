@@ -15,21 +15,27 @@ import ReservationBtn from '../components/reservation/Reservation.astro';
 import TableRow from '../components/table/TableRow.astro';
 import TableHead from '../components/table/TableHead.astro';
 import TableData from '../components/table/TableData.astro';
+
+// Image components
+import { Image } from 'astro:assets';
+import TopImage from '../assets/img02.png';
 ---
 
 <Layout title="Welcome to Astro.">
     <section class="pt-10">
-        <img
-            src=""
-            alt=""
-            class="h-80 w-full border-solid bg-gray-900"
+        <Image
+            src={TopImage}
+            alt="バンガローのイメージイラスト"
+            width="1480"
+            height="780"
+            class="mb-4 h-[195px] w-full border-solid bg-gray-900 object-cover"
             aria-label="バンガローのイメージイラスト"
         />
-        <h1 class="text-center text-xl">
+        <h1 class="mb-4 text-center text-xl">
             ハーブの香りと木々の隙間から降り注ぐ<br />木漏れ日を感じる癒し空間
         </h1>
     </section>
-    <section>
+    <section class="grid gap-4 pb-[25px]">
         <SecTitle title="お知らせ" />
         <NewsList />
         <ReservationBtn />
