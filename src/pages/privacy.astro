@@ -11,22 +11,30 @@ const { UserPrivacyPolicy, PrivacyItem, Contact } = PrivacyPolicy;
 <Layout title="プライバシーポリシー">
     <article class="pt-[66px]">
         <section>
-            <SecTitle>プライバシーポリシー</SecTitle>
+            <SecTitle title="プライバシーポリシー" />
 
             <PrivacyBox>
-                <h3 class="font-kaisei text-[15px] leading-[25px] before:content-['ー'] after:content-['ー']">
+                <h3
+                    class="font-kaisei text-[15px] leading-[25px] before:content-['ー'] after:content-['ー']"
+                >
                     {UserPrivacyPolicy[0].title}
                 </h3>
                 <p class="first-letter:pl-4">{UserPrivacyPolicy[0].content}</p>
                 <ol class="grid list-decimal gap-[14px] pl-5">
-                    {UserPrivacyPolicy[0].items.map((item) => <li class="leading-[25px]">{item}</li>)}
+                    {
+                        UserPrivacyPolicy[0].items.map((item) => (
+                            <li class="leading-[25px]">{item}</li>
+                        ))
+                    }
                 </ol>
             </PrivacyBox>
 
             {
                 PrivacyItem.map((item) => (
                     <PrivacyBox>
-                        <h3 class="font-kaisei text-[15px] leading-[25px]">{item.title}</h3>
+                        <h3 class="font-kaisei text-[15px] leading-[25px]">
+                            {item.title}
+                        </h3>
                         <p class="leading-[25px]">{item.content}</p>
                         {item.items && (
                             <ul class="list-disc pl-5">
@@ -43,9 +51,11 @@ const { UserPrivacyPolicy, PrivacyItem, Contact } = PrivacyPolicy;
                 <div>
                     <ul>
                         {
-                            Object.entries(Contact[0].details).map(([key, value]) => (
-                                <li class="leading-[25px]">{value}</li>
-                            ))
+                            Object.entries(Contact[0].details).map(
+                                ([key, value]) => (
+                                    <li class="leading-[25px]">{value}</li>
+                                )
+                            )
                         }
                     </ul>
                 </div>
