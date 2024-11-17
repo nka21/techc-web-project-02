@@ -7,7 +7,7 @@ import InnerTitle from '../components/common/InnerTitle.astro';
 <Layout title="アクセス">
     <article class="pt-[66px]">
         <section>
-            <SecTitle>アクセス</SecTitle>
+            <SecTitle title="アクセス" />
             <div class="my-[25px]">
                 <div class="grid gap-[25px]">
                     <InnerTitle>住所</InnerTitle>
@@ -30,10 +30,13 @@ import InnerTitle from '../components/common/InnerTitle.astro';
         <section class="my-[25px] grid gap-[25px]">
             <InnerTitle>自動車の場合</InnerTitle>
             <ul class="text-[15px]">
-                <li class="leading-[25px] before:content-['・']">浜田道瑞穂インターチェンジから8km(約10分）</li>
-                <li class="leading-[25px] before:content-['・']">原山雲海ロード/県道327号を直進する</li>
+                <li class="leading-[25px] before:content-['・']">
+                    浜田道瑞穂インターチェンジから8km(約10分）
+                </li>
+                <li class="leading-[25px] before:content-['・']">
+                    原山雲海ロード/県道327号を直進する
+                </li>
             </ul>
         </section>
     </article>
-    <!-- footerがPC画面だと切れてしまっているので要対策 -->
 </Layout>
