@@ -19,6 +19,10 @@ import TableData from '../components/table/TableData.astro';
 // Image components
 import { Image } from 'astro:assets';
 import TopImage from '../assets/img02.png';
+
+// Carousel images
+const CarouselImages = await Astro.glob('../assets/slider/*');
+const CarouselImagesName = import.meta.glob('../assets/slider/*');
 ---
 
 <Layout title="邑南町香木の森公園バンガロー">
