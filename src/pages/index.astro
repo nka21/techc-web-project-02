@@ -66,6 +66,35 @@ const CarouselImagesName = import.meta.glob('../assets/slider/*');
     </section>
     <section>
         <!-- ここにスライドを追加予定 -->
+        <div class="slider">
+            <ul>
+                {
+                    CarouselImages.map((image, index) => {
+                        const fileName = image.default.src
+                            .split('/')
+                            .pop()
+                            .split('.')[0];
+                        return (
+                            <li>
+                                <input
+                                    type="radio"
+                                    name="slide"
+                                    checked={index === 0 ? true : undefined}
+                                />
+                                <div class="slide">
+                                    <Image
+                                        width="337"
+                                        height="225"
+                                        src={image.default}
+                                        alt={fileName}
+                                    />
+                                </div>
+                            </li>
+                        );
+                    })
+                }
+            </ul>
+        </div>
         <p class="py-6 text-center text-sm leading-[25px]">
             香木の森公園の中にあるバンガロー施設。<br
             />木漏れ日が差し込む自然の中、<br />
