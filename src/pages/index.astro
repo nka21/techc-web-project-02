@@ -15,46 +15,54 @@ import ReservationBtn from '../components/reservation/Reservation.astro';
 import TableRow from '../components/table/TableRow.astro';
 import TableHead from '../components/table/TableHead.astro';
 import TableData from '../components/table/TableData.astro';
+
+// Image components
+import { Image } from 'astro:assets';
+import TopImage from '../assets/img02.png';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="邑南町香木の森公園バンガロー">
     <section class="pt-10">
-        <img
-            src=""
-            alt=""
-            class="h-80 w-full border-solid bg-gray-900"
+        <Image
+            src={TopImage}
+            alt="バンガローのイメージイラスト"
+            width="1480"
+            height="780"
+            class="mb-4 h-[195px] w-full border-solid bg-gray-900 object-cover"
             aria-label="バンガローのイメージイラスト"
         />
-        <h1 class="text-center text-xl">
+        <h1 class="mb-4 text-center font-kaisei text-xl">
             ハーブの香りと木々の隙間から降り注ぐ<br />木漏れ日を感じる癒し空間
         </h1>
     </section>
-    <section>
+    <section class="grid gap-4 pb-[25px]">
         <SecTitle title="お知らせ" />
         <NewsList />
         <ReservationBtn />
     </section>
     <section>
         <SecTitle title="ご利用金額" />
-        <InnerTitle>定員：4名様</InnerTitle>
-        <table class="w-full border-[1px] border-gray-900">
-            <TableRow>
-                <TableHead> 平日 </TableHead>
-                <TableData>15,000円</TableData>
-            </TableRow>
-            <TableRow>
-                <TableHead> 土日祝 </TableHead>
-                <TableData>18,000円</TableData>
-            </TableRow>
-            <TableRow>
-                <TableHead> 長期休暇 </TableHead>
-                <TableData>20,000円</TableData>
-            </TableRow>
-        </table>
+        <div class="mt-[16px] grid gap-[26px]">
+            <InnerTitle>定員：4名様</InnerTitle>
+            <table class="w-full border-[1px] border-gray-900">
+                <TableRow>
+                    <TableHead> 平日 </TableHead>
+                    <TableData>15,000円</TableData>
+                </TableRow>
+                <TableRow>
+                    <TableHead> 土日祝 </TableHead>
+                    <TableData>18,000円</TableData>
+                </TableRow>
+                <TableRow>
+                    <TableHead> 長期休暇 </TableHead>
+                    <TableData>20,000円</TableData>
+                </TableRow>
+            </table>
+        </div>
     </section>
     <section>
         <!-- ここにスライドを追加予定 -->
-        <p class="text-sm leading-6">
+        <p class="py-6 text-center text-sm leading-[25px]">
             香木の森公園の中にあるバンガロー施設。<br
             />木漏れ日が差し込む自然の中、<br />
             四季折々の風景を楽しめます。<br
