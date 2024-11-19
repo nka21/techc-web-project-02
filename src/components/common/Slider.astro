@@ -1,0 +1,89 @@
+---
+// Carousel images
+
+import { Image } from 'astro:assets';
+const CarouselImages = await Astro.glob('../../assets/slider/*');
+---
+
+<div class="slider">
+    <ul>
+        {
+            CarouselImages.map((image, index) => {
+                const fileName = image.default.src
+                    .split('/')
+                    .pop()
+                    .split('.')[0];
+                return (
+                    <li>
+                        <input
+                            type="radio"
+                            name="slide"
+                            checked={index === 0 ? true : undefined}
+                        />
+                        <Image
+                            width="337"
+                            height="225"
+                            src={image.default}
+                            alt={fileName}
+                        />
+                    </li>
+                );
+            })
+        }
+    </ul>
+</div>
+
+<style>
+    :root {
+        --slider-height: 250px;
+        --slider-image-height: calc(var(--slider-height) - 30px);
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .slider {
+        position: relative;
+        ul {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: var(--slider-height);
+            align-items: flex-end;
+            justify-content: center;
+            gap: 14px;
+            li {
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: var(--slider-image-height);
+                    opacity: 0;
+                    transition: opacity 1s;
+                }
+                input {
+                    /* スタイルリセット */
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+
+                    position: relative;
+                    width: 10px;
+                    height: 10px;
+                    background: #c1c1c1;
+                    border-radius: 50%;
+                    border: none;
+                    outline: none;
+                    &:checked {
+                        background: #000;
+                        & ~ img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -19,6 +19,9 @@ import TableData from '../components/table/TableData.astro';
 // Image components
 import { Image } from 'astro:assets';
 import TopImage from '../assets/img02.png';
+
+// Carousel images
+import Slider from '../components/common/Slider.astro';
 ---
 
 <Layout title="邑南町香木の森公園バンガロー">
@@ -60,8 +63,8 @@ import TopImage from '../assets/img02.png';
             </table>
         </div>
     </section>
-    <section>
-        <!-- ここにスライドを追加予定 -->
+    <section class="pt-6">
+        <Slider />
         <p class="py-6 text-center text-sm leading-[25px]">
             香木の森公園の中にあるバンガロー施設。<br
             />木漏れ日が差し込む自然の中、<br />
