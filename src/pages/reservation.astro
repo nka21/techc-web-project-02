@@ -8,6 +8,7 @@ import SectionDivider from "../components/ui/SectionDivider.astro";
 import { Image } from "astro:assets";
 import Reservation01 from "../assets/img05.png";
 import Reservation02 from "../assets/img01.png";
+import NoticeBox from "../components/ui/NoticeBox.astro";
 ---
 
 <Layout title="ご予約について">
@@ -21,14 +22,13 @@ import Reservation02 from "../assets/img01.png";
             />
         </div>
 
-        <!-- 手紙みたいなやつ -->
-        <div class="mt-4 py-4 px-5 border-[0.5px] border-black-100 justify-center flex">
-            <ul class="text-xs leading-6 tracking-widest text-black-100">
-                <li class="border-b-[0.5px] border-black-100">・ご予約は90日先まで受付ております</li>
-                <li class="border-b-[0.5px] border-black-100">・ご利用日前日の17:00までに、ご予約ください</li>
-                <li class="border-b-[0.5px] border-black-100">・ペット同伴での宿泊は対応しておりません</li>
-            </ul>
-        </div>
+        <NoticeBox
+            items={[
+                "ご予約は90日先まで受付ております",
+                "ご利用日前日の17:00までに、ご予約ください",
+                "ペット同伴での宿泊は対応しておりません",
+            ]}
+        />
     </section>
 
     <SectionDivider />
@@ -53,15 +53,13 @@ import Reservation02 from "../assets/img01.png";
     <section>
         <InnerTitle>ご利用について</InnerTitle>
 
-        <!-- 手紙みたいなやつ -->
-        <div class="mt-6 mx-2 py-4 px-5 border-[0.5px] border-black-100 items-center justify-center flex">
-            <ul class="text-xs leading-6 tracking-widest text-black-100">
-                <li class="border-b-[0.5px] border-black-100">・ご利用時間は15:00~翌日10:00です。</li>
-                <li class="border-b-[0.5px] border-black-100">・備品等のバンガロー外への持ち出しは できません。</li>
-                <li class="border-b-[0.5px] border-black-100">・ゴミは受付時に専用の袋をお渡ししますので</li>
-                <li class="border-b-[0.5px] border-black-100">燃えるゴミ燃えないゴミに分けて玄関内においてください。</li>
-            </ul>
-        </div>
+        <NoticeBox
+            items={[
+                "ご利用時間は15:00~翌日10:00です。",
+                "備品等のバンガロー外への持ち出しは できません。",
+                "ゴミは受付時に専用の袋をお渡ししますので、燃えるゴミ燃えないゴミに分けて玄関内においてください。",
+            ]}
+        />
     </section>
 
     <SectionDivider />
