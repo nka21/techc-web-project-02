@@ -9,42 +9,22 @@ const sortedNews = newsData.news.sort(
 ---
 
 <ul class="grid grid-cols-[max-content,1fr] text-sm leading-[25px]">
-    <li class="col-span-2 grid grid-cols-subgrid">
-        <a
-            href="#"
-            class="col-span-2 grid grid-cols-subgrid gap-4 border-b-[1px] border-gray-900 px-2 py-1"
-        >
-            <p>2020.02.01</p>
-            <p class="line-clamp-2">
-                こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
-            </p>
-        </a>
-    </li>
-    <li class="col-span-2 grid grid-cols-subgrid">
-        <a
-            href="#"
-            class="col-span-2 grid grid-cols-subgrid gap-4 border-b-[1px] border-gray-900 px-2 py-1"
-        >
-            <p>2020.02.01</p>
-            <p class="line-clamp-2">
-                こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
-            </p>
-        </a>
-    </li>
-    <li class="col-span-2 grid grid-cols-subgrid">
-        <a
-            href="#"
-            class="col-span-2 grid grid-cols-subgrid gap-4 border-b-[1px] border-gray-900 px-2 py-1"
-        >
-            <p>2020.02.01</p>
-            <p class="line-clamp-2">
-                こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは
-            </p>
-        </a>
-    </li>
+    {
+        sortedNews.map((item) => (
+            <li class="col-span-2 grid grid-cols-subgrid">
+                <a
+                    href="/news/"
+                    class="col-span-2 grid grid-cols-subgrid gap-4 border-b-[1px] border-gray-900 px-2 py-1"
+                >
+                    <p>{item.date}</p>
+                    <p class="line-clamp-2">{item.title}</p>
+                </a>
+            </li>
+        ))
+    }
 </ul>
 
-<a href="#" class="ml-auto flex w-fit items-center gap-1 text-[10px]">
+<a href="/news/" class="ml-auto flex w-fit items-center gap-1 text-[10px]">
     詳しく見る
     <span
         class="block h-0 w-0 border-y-[6px] border-l-[8px] border-transparent border-l-black"
