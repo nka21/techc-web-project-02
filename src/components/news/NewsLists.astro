@@ -1,5 +1,8 @@
 ---
+// テキストをまとめたjsonファイル
 import newsData from '../../locales/ja/news.json';
+
+// 日付順にnews配列をソート (降順)
 const sortedNews = newsData.news.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
