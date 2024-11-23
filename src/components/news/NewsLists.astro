@@ -1,3 +1,10 @@
+---
+import newsData from '../../locales/ja/news.json';
+const sortedNews = newsData.news.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+---
+
 <ul class="grid grid-cols-[max-content,1fr] text-sm leading-[25px]">
     <li class="col-span-2 grid grid-cols-subgrid">
         <a
