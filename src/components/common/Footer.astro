@@ -2,12 +2,13 @@
 const { privacyPolicyLink, managerInfo, copyright } = Astro.props;
 ---
 
-<footer class="w-full bg-gray-900 py-6 text-center text-white">
+<footer class="w-full bg-primary py-6 text-center text-white">
     <a href={privacyPolicyLink} class="text-[10px]">プライバシーポリシー</a>
     <p class="text-[10px]">
         {managerInfo}
     </p>
     <small>
-        <p class="text-[10px]">{copyright}</p>
+        <!-- コピーライトだけいろが変わりません。 -->
+        <p class="text-[10px]">&copy;{copyright}</p>
     </small>
 </footer>
