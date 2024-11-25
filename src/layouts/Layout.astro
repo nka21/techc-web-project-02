@@ -30,9 +30,11 @@ const copyright = '©️2024koubokubungalow';
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="font-kurenaido">
+    <!-- TODO: containerクラスをカスタマイズする必要がある -->
+    <body class="font-kurenaido container mx-auto">
         <Header />
-        <main class="px-[14px]">
+        <!-- TODO: パンくずリストコンポーネントをここに追加 "/index" のみを非表示に -->
+        <main class="px-6 my-8">
             <slot />
         </main>
         <Footer
