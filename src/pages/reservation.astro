@@ -1,0 +1,117 @@
+---
+import SecTitle from "../components/common/SecTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import InnerTitle from "../components/common/InnerTitle.astro";
+import SectionDivider from "../components/ui/SectionDivider.astro";
+
+// 画像のsrc定義
+import { Image } from "astro:assets";
+import Reservation01 from "../assets/img05.png";
+import Reservation02 from "../assets/img01.png";
+import NoticeBox from "../components/ui/NoticeBox.astro";
+---
+
+<Layout title="ご予約について">
+    <!-- ご予約について -->
+    <section>
+        <SecTitle title="ご予約について" />
+        <div class="mt-5 mb-4">
+            <Image
+            src={Reservation01}
+            alt="バンガローの写真"
+            />
+        </div>
+
+        <NoticeBox
+            items={[
+                "ご予約は90日先まで受付ております",
+                "ご利用日前日の17:00までに、ご予約ください",
+                "ペット同伴での宿泊は対応しておりません",
+            ]}
+        />
+    </section>
+
+    <SectionDivider />
+
+    <!-- BBQレンタル -->
+    <section>
+        <InnerTitle>BBQコンロのレンタル</InnerTitle>
+
+        <div class="mt-4 px-2">
+            <p class="text-sm leading-6 tracking-widest text-black-100">
+                BBQコンロをレンタルしています<br/>
+                下記のセット内容からお選びください。<br/>
+                レンタルをご希望の方は<br/>
+                予約ボタンからご予約ください
+            </p>
+        </div>
+    </section>
+
+    <SectionDivider />
+
+    <!-- ご利用について -->
+    <section>
+        <InnerTitle>ご利用について</InnerTitle>
+
+        <NoticeBox
+            items={[
+                "ご利用時間は15:00~翌日10:00です。",
+                "備品等のバンガロー外への持ち出しは できません。",
+                "ゴミは受付時に専用の袋をお渡ししますので、燃えるゴミ燃えないゴミに分けて玄関内においてください。",
+            ]}
+        />
+    </section>
+
+    <SectionDivider />
+
+    <!-- 受付窓口 -->
+     <section>
+        <InnerTitle>受付窓口</InnerTitle>
+        <div class="mt-4 px-2 flex-col flex space-y-4">
+
+            <!-- 受付場所 -->
+            <div>
+                <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆受付場所</p>
+                <p class="text-sm leading-6 tracking-widest text-black-100">いこいの村しまね</p>
+            </div>
+
+            <!-- 画像 -->
+            <div class="my-4">
+                <Image
+                    src={Reservation02}
+                    alt="施設の写真"
+                />
+            </div>
+
+            <!-- 住所と電話番号 -->
+            <div>
+                <p class="text-sm leading-6 tracking-widest text-black-100">住所:島根県邑智郡邑南町高水2467-10</p>
+                <p class="text-sm leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
+            </div>
+
+            <!-- 受付時間 -->
+            <div>
+                <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆受付時間</p>
+                <!-- 受付時間 / チェックイン -->
+                 <div>
+                    <p class="text-sm leading-6 tracking-widest text-black-100">＜チェックイン＞</p>
+                    <p class="text-sm leading-6 tracking-widest text-black-100">15:00~19:00</p>
+                    <p class="text-sm leading-6 tracking-widest text-black-100">＊17:00を過ぎる場合は必ずご連絡ください。</p>
+                    <p class="text-sm leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
+                </div>
+                    
+                <!-- 受付時間 / チェックアウト -->
+                <div class="mt-2">
+                    <p class="text-sm leading-6 tracking-widest text-black-100">＜チェックアウト＞</p>
+                    <p class="text-sm leading-6 tracking-widest text-black-100">08:00~10:00</p>
+                </div>
+            </div>
+
+            <!-- 駐車場について -->
+            <div>
+                <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆駐車場について</p>
+                <p class="text-sm leading-6 tracking-widest text-black-100">＊駐車スペースはチェックイン時にご確認ください。</p>
+            </div>
+        </div>
+     </section>
+</Layout>
