@@ -37,6 +37,10 @@ const CarouselImages = await Astro.glob('../../assets/slider/*');
     :root {
         --slider-height: 250px;
         --slider-image-height: calc(var(--slider-height) - 30px);
+        @media (min-width: 1024px) {
+            --slider-height: 550px;
+            --slider-image-height: calc(var(--slider-height) - 40px);
+        }
     }
 
     img {

@@ -1,10 +1,10 @@
 ---
 const { items } = Astro.props;
 ---
-<div class="mt-4 py-4 px-5 border-[0.5px] border-black-100">
-    <ul class="text-xs leading-6 tracking-widest text-black-100">
+<div class="mt-4 py-4 lg:py-6 px-5 border-[0.5px] border-black-100">
+    <ul class="text-xs lg:text-[16px] leading-6 lg:leading-loose tracking-widest text-black-100">
         {items.map((item: string) => (
-            <li class="border-b-[0.5px] border-black-100 list-disc list-inside pl-2 pr-">{item}</li>
+            <li class="border-b-[0.5px] border-black-100 list-disc list-inside pl-2">{item}</li>
         ))}
     </ul>
 </div>
