@@ -8,9 +8,9 @@ const { title, content, date } = Astro.props;
     <div class="">
         <InnerTitle>{title}</InnerTitle>
     </div>
-    <div class="mx-5 my-6 bg-accent px-3 py-3">
+    <div class="mx-5 my-6 bg-accent px-3 lg:px-5 lg:py-5 py-3">
         <p
-            class="text-balance text-xs font-thin leading-loose tracking-widest text-black-100 whitespace-pre-line"
+            class="text-balance text-xs lg:text-sm font-thin leading-loose lg:leading-loose tracking-widest text-black-100 whitespace-pre-line"
         >
             {content}
         </p>
@@ -18,6 +18,6 @@ const { title, content, date } = Astro.props;
     <div class="flex items-center space-x-3">
         <div class="h-[0px] w-full border-[0.5px] border-black-100 opacity-30">
         </div>
-        <p class="text-sm text-black-100">{date}</p>
+        <p class="text-sm lg:text-[16px] text-black-100">{date}</p>
     </div>
 </div>
