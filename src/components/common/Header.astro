@@ -51,7 +51,11 @@ const navItems = [
     </nav>
 </header>
 <!-- 背景 -->
-<div id="bg" class="pointer-events-none fixed inset-0 z-20"></div>
+<div
+    id="bg"
+    class="pointer-events-none fixed inset-0 z-20 lg:pointer-events-none lg:backdrop-blur-none"
+>
+</div>
 
 <script>
     const menuButton = document.getElementById('menuButton');
@@ -60,7 +64,7 @@ const navItems = [
 
     menuButton?.addEventListener('click', () => {
         menuList?.classList.toggle('h-fit');
-        menuBg?.classList.toggle('lg:pointer-events-auto');
-        menuBg?.classList.toggle('lg:backdrop-blur-sm');
+        menuBg?.classList.toggle('pointer-events-auto');
+        menuBg?.classList.toggle('backdrop-blur-sm');
     });
 </script>
