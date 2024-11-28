@@ -8,13 +8,13 @@ const sortedNews = newsData.news.sort(
 );
 ---
 
-<ul class="grid grid-cols-[max-content,1fr] text-sm leading-[25px]">
+<ul class="grid grid-cols-[max-content,1fr] text-xs leading-[25px]">
     {
         sortedNews.map((item) => (
             <li class="col-span-2 grid grid-cols-subgrid">
                 <a
                     href="/news/"
-                    class="col-span-2 grid grid-cols-subgrid gap-4 border-b-[1px] border-black-100 px-2 py-1"
+                    class="col-span-2 grid grid-cols-subgrid gap-14 border-b-[1px] border-black-100 px-2 py-1"
                 >
                     <p>{item.date}</p>
                     <p class="line-clamp-2">{item.title}</p>
