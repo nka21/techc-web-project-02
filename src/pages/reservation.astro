@@ -35,11 +35,11 @@ import NoticeBox from "../components/ui/NoticeBox.astro";
     <SectionDivider />
 
     <!-- BBQレンタル -->
-    <section>
+    <section class="">
         <InnerTitle>BBQコンロのレンタル</InnerTitle>
 
         <div class="mt-4 px-2">
-            <p class="text-sm leading-6 tracking-widest text-black-100">
+            <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">
                 BBQコンロをレンタルしています<br/>
                 下記のセット内容からお選びください。<br/>
                 レンタルをご希望の方は<br/>
@@ -73,7 +73,7 @@ import NoticeBox from "../components/ui/NoticeBox.astro";
             <!-- 受付場所 -->
             <div>
                 <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆受付場所</p>
-                <p class="text-sm leading-6 tracking-widest text-black-100">いこいの村しまね</p>
+                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">いこいの村しまね</p>
             </div>
 
             <!-- 画像 -->
@@ -86,33 +86,35 @@ import NoticeBox from "../components/ui/NoticeBox.astro";
 
             <!-- 住所と電話番号 -->
             <div>
-                <p class="text-sm leading-6 tracking-widest text-black-100">住所:島根県邑智郡邑南町高水2467-10</p>
-                <p class="text-sm leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
+                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">住所:島根県邑智郡邑南町高水2467-10</p>
+                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
             </div>
 
             <!-- 受付時間 -->
             <div>
-                <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆受付時間</p>
+                <p class="font-kaisei text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">◆受付時間</p>
                 <!-- 受付時間 / チェックイン -->
-                 <div>
-                    <p class="text-sm leading-6 tracking-widest text-black-100">＜チェックイン＞</p>
-                    <p class="text-sm leading-6 tracking-widest text-black-100">15:00~19:00</p>
-                    <p class="text-sm leading-6 tracking-widest text-black-100">＊17:00を過ぎる場合は必ずご連絡ください。</p>
-                    <p class="text-sm leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
-                </div>
-                    
-                <!-- 受付時間 / チェックアウト -->
-                <div class="mt-2">
-                    <p class="text-sm leading-6 tracking-widest text-black-100">＜チェックアウト＞</p>
-                    <p class="text-sm leading-6 tracking-widest text-black-100">08:00~10:00</p>
+                <div class="lg:flex lg:gap-7">
+                    <div>
+                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＜チェックイン＞</p>
+                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">15:00~19:00</p>
+                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＊17:00を過ぎる場合は必ずご連絡ください。</p>
+                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
+                    </div>
+
+                    <!-- 受付時間 / チェックアウト -->
+                    <div class="mt-2 lg:mt-0">
+                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＜チェックアウト＞</p>
+                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">08:00~10:00</p>
+                    </div>
                 </div>
             </div>
 
             <!-- 駐車場について -->
             <div>
-                <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆駐車場について</p>
-                <p class="text-sm leading-6 tracking-widest text-black-100">＊駐車スペースはチェックイン時にご確認ください。</p>
+                <p class="font-kaisei text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">◆駐車場について</p>
+                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＊駐車スペースはチェックイン時にご確認ください。</p>
             </div>
         </div>
-     </section>
+    </section>
 </Layout>
