@@ -8,7 +8,7 @@ const sortedNews = newsData.news.sort(
 );
 ---
 
-<ul class="grid grid-cols-[max-content,1fr] text-xs leading-[25px]">
+<ul class="grid grid-cols-[max-content,1fr] text-xs leading-[25px] px-5">
     {
         sortedNews.map((item) => (
             <li class="col-span-2 grid grid-cols-subgrid">
@@ -24,7 +24,7 @@ const sortedNews = newsData.news.sort(
     }
 </ul>
 
-<a href="/news/" class="ml-auto flex w-fit items-center gap-1 text-[10px]">
+<a href="/news/" class="ml-auto flex w-fit items-center gap-1 text-[10px] px-5">
     詳しく見る
     <span
         class="block h-0 w-0 border-y-[6px] border-l-[8px] border-transparent border-l-black-100"
