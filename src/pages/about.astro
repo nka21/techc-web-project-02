@@ -18,23 +18,7 @@ import Image04 from '../assets/img04.png';
     <article>
         <section>
             <SecTitle title="施設案内" />
-            <div class="mt-[26px]">
-                <div class="mb-[50px] grid gap-[6px]">
-                    <InnerTitle>2段ベッドx2台【9棟】</InnerTitle>
-                    <div class="grid gap-3">
-                        <Image
-                            width="570"
-                            height="392"
-                            class="aspect-video w-full object-cover"
-                            src={Image04}
-                            alt="2段ベッドx2台部屋の写真です。"
-                        />
-                        <p class="text-center text-sm leading-[25px]">
-                            一部屋に二段ベットが台設置されており、<br />
-                            最大4名様まで宿泊可能です。
-                        </p>
-                    </div>
-                </div>
+            <div class="mt-[26px] lg:grid lg:grid-cols-2 lg:gap-7">
                 <div class="mb-[50px] grid gap-[6px]">
                     <InnerTitle>シングルベッドx2台【2棟】</InnerTitle>
                     <div class="grid gap-3">
@@ -45,9 +29,29 @@ import Image04 from '../assets/img04.png';
                             src={Image04}
                             alt="2段ベッドx2台部屋の写真です。"
                         />
-                        <p class="text-center text-sm leading-[25px]">
+                        <p
+                            class="text-center text-[16px] text-sm leading-[25px]"
+                        >
                             一部屋にシングルベッドが2台あるので<br />
                             最大2名様まで宿泊可能です
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-[50px] grid gap-[6px]">
+                    <InnerTitle>2段ベッドx2台【9棟】</InnerTitle>
+                    <div class="grid gap-3">
+                        <Image
+                            width="570"
+                            height="392"
+                            class="aspect-video w-full object-cover"
+                            src={Image04}
+                            alt="2段ベッドx2台部屋の写真です。"
+                        />
+                        <p
+                            class="text-center text-[16px] text-sm leading-[25px]"
+                        >
+                            一部屋に二段ベットが台設置されており、<br />
+                            最大4名様まで宿泊可能です。
                         </p>
                     </div>
                 </div>
