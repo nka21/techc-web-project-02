@@ -5,7 +5,7 @@ const navItems = [
     { name: '施設案内', link: '/about/' },
     { name: 'ご予約について', link: '/reservation/' },
     { name: 'アクセス', link: '/access/' },
-    { name: 'ご意見・ご感想・お問い合わせ', link: '/contact/' },
+    { name: 'お問い合わせ', link: '/contact/' },
 ];
 ---
 
@@ -36,12 +36,12 @@ const navItems = [
         <!-- ナビゲーションリスト -->
         <ul
             id="menuList"
-            class="h-0 overflow-hidden bg-base text-center duration-200 lg:h-fit lg:overflow-visible"
+            class="h-0 overflow-hidden bg-base text-center duration-200 lg:grid lg:h-fit lg:grid-cols-6 lg:overflow-visible"
         >
             {
                 navItems.map((item) => (
-                    <li class="border-b border-gray-900 last:border-none">
-                        <a href={item.link} class="block py-3">
+                    <li class="border-b border-gray-900 last:border-none lg:border-none">
+                        <a href={item.link} class="block py-3 font-kaisei">
                             {item.name}
                         </a>
                     </li>
@@ -50,12 +50,17 @@ const navItems = [
         </ul>
     </nav>
 </header>
+<!-- 背景 -->
+<div id="bg" class="pointer-events-none fixed inset-0 z-20"></div>
 
 <script>
     const menuButton = document.getElementById('menuButton');
     const menuList = document.getElementById('menuList');
+    const menuBg = document.getElementById('bg');
 
     menuButton?.addEventListener('click', () => {
         menuList?.classList.toggle('h-fit');
+        menuBg?.classList.toggle('pointer-events-auto');
+        menuBg?.classList.toggle('backdrop-blur-sm');
     });
 </script>
