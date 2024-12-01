@@ -1,33 +1,33 @@
 ---
-import SecTitle from "../components/common/SecTitle.astro";
-import Layout from "../layouts/Layout.astro";
-import InnerTitle from "../components/common/InnerTitle.astro";
-import SectionDivider from "../components/ui/SectionDivider.astro";
+import SecTitle from '../components/common/SecTitle.astro';
+import Layout from '../layouts/Layout.astro';
+import InnerTitle from '../components/common/InnerTitle.astro';
+import SectionDivider from '../components/ui/SectionDivider.astro';
 
 // 画像のsrc定義
-import { Image } from "astro:assets";
-import Reservation01 from "../assets/img05.png";
-import Reservation02 from "../assets/img01.png";
-import NoticeBox from "../components/ui/NoticeBox.astro";
+import { Image } from 'astro:assets';
+import Reservation01 from '../assets/img05.png';
+import Reservation02 from '../assets/img01.png';
+import NoticeBox from '../components/ui/NoticeBox.astro';
 ---
 
 <Layout title="ご予約について">
     <!-- ご予約について -->
     <section>
         <SecTitle title="ご予約について" />
-        <div class="mt-5 mb-4">
+        <div class="mb-4 mt-5">
             <Image
-            src={Reservation01}
-            alt="バンガローの写真"
-            class="w-full h-96 object-cover"
+                src={Reservation01}
+                alt="バンガローの写真"
+                class="h-96 w-full object-cover"
             />
         </div>
 
         <NoticeBox
             items={[
-                "ご予約は90日先まで受付ております",
-                "ご利用日前日の17:00までに、ご予約ください",
-                "ペット同伴での宿泊は対応しておりません",
+                'ご予約は90日先まで受付ております',
+                'ご利用日前日の17:00までに、ご予約ください',
+                'ペット同伴での宿泊は対応しておりません',
             ]}
         />
     </section>
@@ -39,12 +39,55 @@ import NoticeBox from "../components/ui/NoticeBox.astro";
         <InnerTitle>BBQコンロのレンタル</InnerTitle>
 
         <div class="mt-4 px-2">
-            <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">
-                BBQコンロをレンタルしています<br/>
-                下記のセット内容からお選びください。<br/>
-                レンタルをご希望の方は<br/>
+            <p
+                class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+            >
+                BBQコンロをレンタルしています<br />
+                下記のセット内容からお選びください。<br />
+                レンタルをご希望の方は<br />
                 予約ボタンからご予約ください
             </p>
+        </div>
+
+        <div
+            class="mt-5 grid grid-cols-2 gap-4 text-xs lg:mx-32 lg:text-[16px]"
+        >
+            <div class="rounded-2xl bg-[#E7D6CA] px-4 py-4 text-center">
+                <h4 class="text-sm lg:text-lg">
+                    基本<span class="text-xs lg:text-[16px]">セット</span>
+                </h4>
+                <div class="my-2 grid gap-1 lg:gap-2">
+                    <p class="flex justify-between">BBQコンロ<span>◯</span></p>
+                    <p class="flex justify-between">網<span>◯</span></p>
+                    <p class="flex justify-between">トング<span>◯</span></p>
+                    <p class="flex justify-between">着火剤<span>◯</span></p>
+                    <p class="flex justify-between">軍手<span>◯</span></p>
+                    <p class="flex justify-between">
+                        チャッカマン<span>◯</span>
+                    </p>
+                </div>
+                <p class="text-sm lg:text-lg">
+                    1,000<span class="text-xs lg:text-[16px]">円</span>
+                </p>
+            </div>
+            <div class="flex-1 rounded-2xl bg-[#D6B5A4] px-4 py-4 text-center">
+                <h4 class="text-sm lg:text-lg">
+                    フル<span class="text-xs lg:text-[16px]">セット</span>
+                </h4>
+                <div class="my-2 grid gap-1 lg:gap-2">
+                    <p class="flex justify-between">BBQコンロ<span>◯</span></p>
+                    <p class="flex justify-between">網<span>◯</span></p>
+                    <p class="flex justify-between">トング<span>◯</span></p>
+                    <p class="flex justify-between">着火剤<span>◯</span></p>
+                    <p class="flex justify-between">軍手<span>◯</span></p>
+                    <p class="flex justify-between">
+                        チャッカマン<span>◯</span>
+                    </p>
+                </div>
+                <p class="text-sm lg:text-lg">
+                    1,500<span class="text-xs lg:text-[16px]">円</span>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -56,9 +99,9 @@ import NoticeBox from "../components/ui/NoticeBox.astro";
 
         <NoticeBox
             items={[
-                "ご利用時間は15:00~翌日10:00です。",
-                "備品等のバンガロー外への持ち出しは できません。",
-                "ゴミは受付時に専用の袋をお渡ししますので、燃えるゴミ燃えないゴミに分けて玄関内においてください。",
+                'ご利用時間は15:00~翌日10:00です。',
+                '備品等のバンガロー外への持ち出しは できません。',
+                'ゴミは受付時に専用の袋をお渡ししますので、燃えるゴミ燃えないゴミに分けて玄関内においてください。',
             ]}
         />
     </section>
@@ -68,52 +111,100 @@ import NoticeBox from "../components/ui/NoticeBox.astro";
     <!-- 受付窓口 -->
     <section>
         <InnerTitle>受付窓口</InnerTitle>
-        <div class="mt-4 px-2 flex-col flex space-y-4">
-
+        <div class="mt-4 flex flex-col space-y-4 px-2">
             <!-- 受付場所 -->
             <div>
-                <p class="font-kaisei text-sm leading-6 tracking-widest text-black-100">◆受付場所</p>
-                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">いこいの村しまね</p>
+                <p
+                    class="font-kaisei text-sm leading-6 tracking-widest text-black-100"
+                >
+                    ◆受付場所
+                </p>
+                <p
+                    class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                >
+                    いこいの村しまね
+                </p>
             </div>
 
             <!-- 画像 -->
             <div class="my-4">
-                <Image
-                    src={Reservation02}
-                    alt="施設の写真"
-                />
+                <Image src={Reservation02} alt="施設の写真" />
             </div>
 
             <!-- 住所と電話番号 -->
             <div>
-                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">住所:島根県邑智郡邑南町高水2467-10</p>
-                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
+                <p
+                    class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                >
+                    住所:島根県邑智郡邑南町高水2467-10
+                </p>
+                <p
+                    class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                >
+                    TEL:0855-95-1205
+                </p>
             </div>
 
             <!-- 受付時間 -->
             <div>
-                <p class="font-kaisei text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">◆受付時間</p>
+                <p
+                    class="font-kaisei text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                >
+                    ◆受付時間
+                </p>
                 <!-- 受付時間 / チェックイン -->
                 <div class="lg:flex lg:gap-7">
                     <div>
-                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＜チェックイン＞</p>
-                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">15:00~19:00</p>
-                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＊17:00を過ぎる場合は必ずご連絡ください。</p>
-                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">TEL:0855-95-1205</p>
+                        <p
+                            class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                        >
+                            ＜チェックイン＞
+                        </p>
+                        <p
+                            class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                        >
+                            15:00~19:00
+                        </p>
+                        <p
+                            class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                        >
+                            ＊17:00を過ぎる場合は必ずご連絡ください。
+                        </p>
+                        <p
+                            class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                        >
+                            TEL:0855-95-1205
+                        </p>
                     </div>
 
                     <!-- 受付時間 / チェックアウト -->
                     <div class="mt-2 lg:mt-0">
-                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＜チェックアウト＞</p>
-                        <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">08:00~10:00</p>
+                        <p
+                            class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                        >
+                            ＜チェックアウト＞
+                        </p>
+                        <p
+                            class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                        >
+                            08:00~10:00
+                        </p>
                     </div>
                 </div>
             </div>
 
             <!-- 駐車場について -->
             <div>
-                <p class="font-kaisei text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">◆駐車場について</p>
-                <p class="text-sm lg:text-[16px] lg:leading-loose leading-6 tracking-widest text-black-100">＊駐車スペースはチェックイン時にご確認ください。</p>
+                <p
+                    class="font-kaisei text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                >
+                    ◆駐車場について
+                </p>
+                <p
+                    class="text-sm leading-6 tracking-widest text-black-100 lg:text-[16px] lg:leading-loose"
+                >
+                    ＊駐車スペースはチェックイン時にご確認ください。
+                </p>
             </div>
         </div>
     </section>

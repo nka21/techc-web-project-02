@@ -12,9 +12,6 @@ import NewsList from '../components/news/NewsLists.astro';
 import ReservationBtn from '../components/reservation/Reservation.astro';
 
 // Table components
-import TableRow from '../components/table/TableRow.astro';
-import TableHead from '../components/table/TableHead.astro';
-import TableData from '../components/table/TableData.astro';
 
 // Image components
 import { Image } from 'astro:assets';
@@ -31,14 +28,16 @@ import Slider from '../components/common/Slider.astro';
             alt="バンガローのイメージイラスト"
             width="1480"
             height="780"
-            class="mb-4 lg:mb-8 max-h-[300px] w-full border-solid object-contain bg-[#d0c994]"
+            class="mb-4 max-h-[300px] w-full border-solid bg-[#d0c994] object-contain lg:mb-8"
             aria-label="バンガローのイメージイラスト"
         />
-        <h1 class="mb-8 lg:mb-12 text-center font-kaisei text-lg lg:text-3xl lg:tracking-widest">
+        <h1
+            class="mb-8 text-center font-kaisei text-lg lg:mb-12 lg:text-3xl lg:tracking-widest"
+        >
             ハーブの香りと木々の隙間から降り注ぐ<br />木漏れ日を感じる癒し空間
         </h1>
     </section>
-    <section class="grid gap-4 lg:gap-8 pb-8 lg:pb-12">
+    <section class="grid gap-4 pb-8 lg:gap-8 lg:pb-12">
         <SecTitle title="お知らせ" />
         <NewsList />
         <ReservationBtn />
@@ -47,25 +46,27 @@ import Slider from '../components/common/Slider.astro';
         <SecTitle title="ご利用金額" />
         <div class="grid gap-4">
             <InnerTitle>定員：4名様</InnerTitle>
-            <table class="w-full border-[1px] border-gray-900">
-                <TableRow>
-                    <TableHead> 平日 </TableHead>
-                    <TableData>15,000円</TableData>
-                </TableRow>
-                <TableRow>
-                    <TableHead> 土日祝 </TableHead>
-                    <TableData>18,000円</TableData>
-                </TableRow>
-                <TableRow>
-                    <TableHead> 長期休暇 </TableHead>
-                    <TableData>20,000円</TableData>
-                </TableRow>
-            </table>
+            <div class="flex gap-4">
+                <div class="flex-1 rounded-2xl bg-[#E7D6CA] py-4 text-center">
+                    <h4>平日</h4>
+                    <p>15,000<span>円</span></p>
+                </div>
+                <div class="flex-1 rounded-2xl bg-[#D6B5A4] py-4 text-center">
+                    <h4>土日祝</h4>
+                    <p>18,000<span>円</span></p>
+                </div>
+                <div class="flex-1 rounded-2xl bg-[#C4957D] py-4 text-center">
+                    <h4>長期休暇</h4>
+                    <p>20,000<span>円</span></p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="pt-8">
         <Slider />
-        <p class="py-5 lg:py-12 text-center text-xs lg:text-lg leading-loose tracking-widest">
+        <p
+            class="py-5 text-center text-xs leading-loose tracking-widest lg:py-12 lg:text-lg"
+        >
             香木の森公園の中にあるバンガロー施設。<br
             />木漏れ日が差し込む自然の中、<br />
             四季折々の風景を楽しめます。<br
