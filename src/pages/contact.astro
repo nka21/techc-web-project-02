@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SecTitle from '../components/common/SecTitle.astro';
+import { Image } from 'astro:assets';
+import Image05 from '../assets/img05.png';
+import InnerTitle from '../components/common/InnerTitle.astro';
+---
+
+<Layout title="お問い合わせ">
+    <section>
+        <SecTitle title="お問い合わせ" />
+        <form class="grid gap-4 py-6 lg:grid-cols-2">
+            <Image
+                src={Image05}
+                alt="バンガローの外観"
+                width="1348"
+                height="897"
+                class="h-40 w-full object-cover lg:h-full"
+            />
+            <div class="text-md grid gap-2 rounded bg-accent p-4">
+                <label for="name">お名前</label>
+                <input type="text" name="name" placeholder="田中　太郎" />
+                <label for="email">メールアドレス</label>
+                <input type="email" placeholder="example@example.com" />
+                <label for="tel">電話番号（任意）</label>
+                <input type="tel" placeholder="01-2345-6789" />
+                <label for="contact-text">お問い合わせ内容</label>
+                <textarea rows="5" name="contact-text" id="c-text"></textarea>
+                <button type="submit" class="mt-4 bg-primary py-1 text-white"
+                    >送信</button
+                >
+            </div>
+        </form>
+    </section>
+    <section>
+        <InnerTitle> 施設に関するお問い合わせ</InnerTitle>
+        <p>いこいの村しまね</p>
+        <p>TEL:0855-95-1205</p>
+    </section>
+</Layout>
