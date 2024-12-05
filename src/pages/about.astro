@@ -12,9 +12,14 @@ import About05 from '../assets/about/about05.png';
 import About06 from '../assets/about/about06.png';
 import About07 from '../assets/about/about07.png';
 import Image04 from '../assets/img04.png';
+
+const breadcrumbItems = [
+    { name: 'ホーム', link: '/' },
+    { name: '施設案内', link: '/about' },
+];
 ---
 
-<Layout title="施設案内">
+<Layout title="施設案内" breadcrumbItems={breadcrumbItems}>
     <article>
         <section>
             <SecTitle title="施設案内" />

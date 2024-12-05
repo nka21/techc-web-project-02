@@ -4,9 +4,14 @@ import SecTitle from '../components/common/SecTitle.astro';
 import { Image } from 'astro:assets';
 import Image05 from '../assets/img05.png';
 import InnerTitle from '../components/common/InnerTitle.astro';
+
+const breadcrumbItems = [
+    { name: 'ホーム', link: '/' },
+    { name: 'お問い合わせ', link: '/contact' },
+];
 ---
 
-<Layout title="お問い合わせ">
+<Layout title="お問い合わせ" breadcrumbItems={breadcrumbItems}>
     <section>
         <SecTitle title="お問い合わせ" />
         <form class="grid gap-4 py-6 lg:grid-cols-2">
