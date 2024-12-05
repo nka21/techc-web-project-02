@@ -1,6 +1,7 @@
 ---
 import InnerTitle from '../common/InnerTitle.astro';
 import Button from '../ui/Button.astro';
+import NoticeBox from '../ui/NoticeBox.astro';
 
 const { title, content, date } = Astro.props;
 ---
@@ -20,7 +21,14 @@ const { title, content, date } = Astro.props;
         <div class="">
             <Button buttonText="クーポンをGET!" />
         </div>
-        <!-- TODO: NotesBoxコンポーネントを今後追加 -->
+        <NoticeBox
+            items={[
+                "予約可能期間は2022.06.04.19:59までです。",
+                "宿泊可能期間は2022.07.01チェックアウトです。",
+                "先着20枚となります。",
+                "土日曜日の宿泊にはご利用いただけません。",
+            ]}
+        />
     </div>
     <div class="flex items-center space-x-3">
         <div class="h-[0px] w-full border-[0.5px] border-black-100 opacity-30">
