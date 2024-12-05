@@ -1,12 +1,20 @@
 ---
+import BreadCrumb from '../components/common/BreadCrumb.astro';
 import Footer from '../components/common/Footer.astro';
 import Header from '../components/common/Header.astro';
 
-interface Props {
-    title: string;
+interface BreadcrumbItem {
+    name: string;
+    link?: string | null;
 }
 
-const { title } = Astro.props;
+interface Props {
+    title: string;
+    breadcrumbItems?: BreadcrumbItem[];
+}
+
+const { title, breadcrumbItems } = Astro.props;
+const currentPath = Astro.url.pathname; // 現在のパスを取得
 
 // Footer contents
 const privacyPolicyLink = '/privacy/';
@@ -35,6 +43,9 @@ const copyright = '2024koubokubungalow';
         <Header />
         <!-- TODO: パンくずリストコンポーネントをここに追加 "/index" のみを非表示に -->
         <main class="px-6 py-10 lg:py-12">
+            {currentPath !== '/' && breadcrumbItems && (
+                <BreadCrumb items={breadcrumbItems} />
+            )}
             <slot />
         </main>
         <Footer
