@@ -9,9 +9,14 @@ import { Image } from 'astro:assets';
 import Reservation01 from '../assets/img05.png';
 import Reservation02 from '../assets/img01.png';
 import NoticeBox from '../components/ui/NoticeBox.astro';
+
+const breadcrumbItems = [
+    { name: 'ホーム', link: '/' },
+    { name: 'ご予約について', link: '/reservation' },
+];
 ---
 
-<Layout title="ご予約について">
+<Layout title="ご予約について" breadcrumbItems={breadcrumbItems}>
     <!-- ご予約について -->
     <section>
         <SecTitle title="ご予約について" />

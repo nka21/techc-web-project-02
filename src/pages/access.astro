@@ -2,9 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import SecTitle from '../components/common/SecTitle.astro';
 import InnerTitle from '../components/common/InnerTitle.astro';
+
+const breadcrumbItems = [
+    { name: 'ホーム', link: '/' },
+    { name: 'アクセス', link: '/access' },
+];
 ---
 
-<Layout title="アクセス">
+<Layout title="アクセス" breadcrumbItems={breadcrumbItems}>
     <article>
         <section>
             <SecTitle title="アクセス" />

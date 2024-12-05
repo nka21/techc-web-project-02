@@ -16,9 +16,14 @@ const sortedNews = newsData.news.sort(
 // 重要なお知らせ（isImportant が true）のアイテムを抽出
 const importantNews = sortedNews.filter((news) => news.isImportant);
 const regularNews = sortedNews.filter((news) => !news.isImportant);
+
+const breadcrumbItems = [
+    { name: 'ホーム', link: '/' },
+    { name: 'お知らせ', link: '/news' },
+];
 ---
 
-<Layout title="お知らせ">
+<Layout title="お知らせ" breadcrumbItems={breadcrumbItems}>
     <div class="mb-6">
         <SecTitle title="お知らせ" />
         {

@@ -6,9 +6,14 @@ import PrivacyBox from '../components/privacy/PrivacyBox.astro';
 import PrivacyPolicy from '../locales/ja/PrivacyPolicy.json';
 
 const { UserPrivacyPolicy, PrivacyItem, Contact } = PrivacyPolicy;
+
+const breadcrumbItems = [
+    { name: 'ホーム', link: '/' },
+    { name: 'プライバシーポリシー', link: '/privacy' },
+];
 ---
 
-<Layout title="プライバシーポリシー">
+<Layout title="プライバシーポリシー" breadcrumbItems={breadcrumbItems}>
     <article>
         <section>
             <SecTitle title="プライバシーポリシー" />
