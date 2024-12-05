@@ -13,4 +13,4 @@
 - GitHub CI/CD ( Prettier / ESLint )
 
 ## トップページ
-<img src="/.github/assets/index.png" alt="トップページの画面" width="300">
+<img src="/.github/assets/index.png" alt="トップページの画面" width="150">
